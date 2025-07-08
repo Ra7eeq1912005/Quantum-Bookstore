@@ -4,18 +4,17 @@ class DemoBook :
     public Book
 {
 public:
-    DemoBook(string Title, long yearOfPublish, double Price,long Quantity) :
-        Book( Title, yearOfPublish, Price,Quantity) {
+    DemoBook(string Title, long yearOfPublish, double Price, long Quantity) :
+        Book(Title, yearOfPublish, Price, Quantity) {
 
     }
-     bool forSale() const override {
+    bool forSale() const override {
         return false;
     }
 
-       double buy(long bookQuantity, const string& email = "", const string& address = "") override {
-        
-             throw runtime_error("Invalid Sale");
-         
-     }
-};
+    double buy(long bookQuantity, const string& email = "", const string& address = "") override {
 
+        throw runtime_error("Invalid Sale");
+
+    }
+};
